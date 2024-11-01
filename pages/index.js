@@ -58,7 +58,7 @@ export default function Home() {
 
     try {
       const cityRequests = cityNames.map(city =>
-        axios.get(`http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${city}`)
+        axios.get(`https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${city}`)
       );
       const cityResponses = await Promise.allSettled(cityRequests);
 
@@ -72,7 +72,7 @@ export default function Home() {
       }
 
       const weatherRequests = cities.map(city =>
-        axios.get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.name}`)
+        axios.get(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.name}`)
       );
       const weatherResponses = await Promise.allSettled(weatherRequests);
 
@@ -114,13 +114,13 @@ export default function Home() {
   const getSearchCityData = async (cityName) => {
     setError('');
     try {
-      const searchResponse = await axios.get(`http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${cityName}`);
+      const searchResponse = await axios.get(`https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${cityName}`);
 
       if (searchResponse.status === 200 && searchResponse.data.length > 0) {
         const cities = searchResponse.data;
 
         const weatherRequests = cities.map(city =>
-          axios.get(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.name}`)
+          axios.get(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city.name}`)
         );
 
         const weatherResponses = await Promise.all(weatherRequests);
