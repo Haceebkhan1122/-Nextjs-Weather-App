@@ -1,0 +1,80 @@
+.cityDetailsContainer {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 367px;
+
+    .favoriteButton {
+            background-color: #ff6b6b; // A nice red color for visibility
+            color: white; // White text to contrast with the red background
+            border: none; // Remove the default border
+            border-radius: 5px; // Rounded corners
+            padding: 10px 20px; // Padding for comfortable click size
+            font-size: 16px; // Slightly larger font
+            font-weight: bold; // Make text bold
+            cursor: pointer; // Pointer cursor for better UX
+            transition: background-color 0.3s ease; // Smooth transition for hover effect
+    
+            &:hover {
+                background-color: #ff4c4c; // Darker shade of red on hover
+            }
+    
+            &:active {
+                background-color: #d14242; // Even darker shade for active state
+            }
+    
+            &:focus {
+                outline: none; // Remove focus outline
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); // Optional subtle shadow
+            }
+        }
+
+    .cityName {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .weatherInfo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .weatherIcon {
+        margin-right: 20px;
+
+        svg {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .weatherDetails {
+        text-align: left;
+
+        .temperature {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1e90ff;
+        }
+
+        .condition {
+            font-size: 18px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .windSpeed,
+        .humidity {
+            font-size: 16px;
+            color: #777;
+            margin-top: 4px;
+        }
+    }
+}

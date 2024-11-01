@@ -1,0 +1,49 @@
+.favouriteCitiesContainer {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-height: 367px;
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .citiesList {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; // Space between tags
+        justify-content: center; // Center align tags
+    }
+
+    .cityTag {
+        display: flex;
+        align-items: center;
+        background-color: #e7f1ff;
+        border: 1px solid #b2d3ff;
+        border-radius: 20px;
+        padding: 5px 10px;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+
+        .removeButton {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            color: #ff0000; // Red color for the cross icon
+            font-size: 16px;
+
+            &:hover {
+                color: #c70000; // Darker red on hover
+            }
+        }
+    }
+}
